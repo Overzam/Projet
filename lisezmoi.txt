@@ -1,4 +1,0 @@
-Dylan Barros, Maximilien Bernard, Thomas Maye, Elliott Stern
-Nous avons créé un jeu où nous simulons une invasion d'un pays ennemi; et pour gagner, il faut les repousser.
-Vous pouvez retrouvez ses composantes dans ce dossier avec tous les programmes et images des différents jeu:
-Il y a les images et les sons, avec les programmes des differentes partie du jeu
