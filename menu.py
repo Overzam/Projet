@@ -24,7 +24,7 @@ def base_menu():
     options_but = pyg.image.load("img_dylan/option_but.png")
     options_but = pyg.transform.scale(options_but, (height // 5, width // 5)).convert_alpha()
     quit_but = pyg.image.load("img_dylan/quit_butt.png")
-    quit_but = pyg.transform.scale(quit_but, (height // 5 - 10, width // 5)).convert_alpha()
+    quit_but = pyg.transform.scale(quit_but, (height // 4, width // 5)).convert_alpha()
 
     class button:
         def __init__(self, x, y, image):
@@ -49,7 +49,7 @@ def base_menu():
 
     play_but = button(height // 2 - 200, 200, play_but)
     options_but = button(height // 2 - 200, 500, options_but)
-    quit_but = button(height // 2 - 190, 800, quit_but)
+    quit_but = button(height // 2 - 240, 800, quit_but)
 
     font = pyg.font.Font('freesansbold.ttf', 128)
     titre = "Wario Ware"

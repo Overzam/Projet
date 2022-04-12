@@ -1,18 +1,16 @@
 import pygame
 from random import randint
 import menu
-from sys import exit
 
 pygame.init()
 pygame.time.Clock()
 pygame.font.init()
 def jeu_max():
-    from jeu_1 import win, loose, amongus
+    from jeu_1 import win, loose, amongus, height, width
     from jeu_thomas import jeu_tomaye
     from transition import trans_screen
+    from menu import base_menu
 
-    x_Mouse = 0
-    0
 
     pygame.mouse.set_visible(0)
 
@@ -26,11 +24,6 @@ def jeu_max():
 
     Point = 0
 
-    # Definis fond du jeu
-    # height = GetSystemMetrics(0)
-    # width = GetSystemMetrics(1)
-    height = 1920
-    width = 1080
     screen = pygame.display.set_mode((height, width))
 
     background = pygame.image.load("img_max\Fond_Max.jpg")
@@ -47,8 +40,6 @@ def jeu_max():
     x_Viseur = height // 2
     y_Viseur = width // 2
 
-    0
-
     # Definition de l' Ult
     Ulte = pygame.image.load("img_max\Bouton u.png")
 
@@ -56,8 +47,6 @@ def jeu_max():
 
     x_Ulte = height - 250
     y_Ulte = width - 200
-
-    r_Ulte = 0
 
     class explo(pygame.sprite.Sprite):
         def __init__(self, pos_x, pos_y):
@@ -120,8 +109,6 @@ def jeu_max():
     y_Soldat = width // 3
     x_Soldat = -100
 
-    r_Soldat = 0
-
     # Definition du soldat2
     pygame.image.load("img_max\Soldat.PNG")
 
@@ -133,8 +120,6 @@ def jeu_max():
     y_Soldat2 = width * 2 // 3
     x_Soldat2 = -100
 
-    r_Soldat2 = 0
-
     # Definition du Tank
     Tank = pygame.image.load("img_max\Tank.PNG")
 
@@ -145,8 +130,6 @@ def jeu_max():
 
     y_Tank = width // 2
     x_Tank = -100
-
-    r_Tank = 0
 
     son_explo = pygame.mixer.Sound('son/son_explo.wav')
     son_explo.set_volume(0.02)
@@ -226,8 +209,9 @@ def jeu_max():
                     y_Viseur += width // 70
 
                 ########################################################################################################################
-
-                # Disparition des unités si touche espace apuyée dessus
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        base_menu()
 
                 # Definis l'espace
                 if event.key == pygame.K_SPACE:

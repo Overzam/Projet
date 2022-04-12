@@ -87,7 +87,7 @@ def menu_mini():
                 pyg.quit()
                 exit()
             if event.type == pyg.KEYDOWN:
-                if event.type == pyg.K_ESCAPE:
+                if event.key == pyg.K_ESCAPE:
                     base_menu()
 
         pyg.display.update()
