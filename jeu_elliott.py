@@ -2,6 +2,7 @@ def jeu_ell():
     import pygame as pyg
     from random import randint
     from jeu_1 import height, width, loose, win
+    from menu import base_menu
     import menu
 
     # Intialisation de pygame
@@ -65,6 +66,11 @@ def jeu_ell():
             # Déplacement joueur
             pyg.key.set_repeat(10)  # Maintenir une touche appuyée revient à appuyer plusieurs fois sur cette touche
             if event.type == pyg.KEYDOWN:
+
+                if event.type == pyg.KEYDOWN:
+                    if event.key == pyg.K_ESCAPE:
+                        music.stop()
+                        base_menu()
 
 
                 # Droite

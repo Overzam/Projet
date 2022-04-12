@@ -10,6 +10,7 @@ def jeu():
     from jeu_1 import height, width, screen, win, loose, amongus, shake, explo
     from transition import trans_screen
     from Siorac import jeu_max
+    from menu import base_menu
     global x_explo
     global y_explo
     global background
@@ -164,6 +165,8 @@ def jeu():
                     if event.key == pyg.K_ESCAPE:
                         musique_jeu.stop()
                         menu.base_menu()
+                    if event.key == pyg.K_x:
+                        seconds_en_plus -= 20
                     if event.key == pyg.K_b:
                         ben_sfx.play()
                     if event.key == pyg.K_m:

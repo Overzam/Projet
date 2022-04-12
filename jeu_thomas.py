@@ -16,6 +16,7 @@ def jeu_tomaye():
     from jeu_1 import screen, width, height, win, loose
     from jeu_elliott import jeu_ell
     from transition import trans_screen
+    from menu import base_menu
     import menu
 
     # initialisation de pygame
@@ -68,6 +69,10 @@ def jeu_tomaye():
                 pyg.quit()
                 exit()
             if event.type == pyg.KEYDOWN:
+                if event.type == pyg.KEYDOWN:
+                    if event.key == pyg.K_ESCAPE:
+                        music.stop()
+                        base_menu()
                 if event.key == pyg.K_LEFT and Leftkey == False:
                     xavion += height / 15
                     nbtouches += 1
