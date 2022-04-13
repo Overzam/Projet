@@ -108,6 +108,9 @@ def amongus():
 
 def win():
     despawn()
+    musique_victoire = pyg.mixer.Sound('son/musique_victoire.mp3')
+    musique_victoire.set_volume(1)
+    musique_victoire.play()
     while True:
         bgjeudylan = pyg.image.load("img_dylan/win.jpg")
         bgjeudylan = pyg.transform.scale(bgjeudylan, (height, width))
