@@ -108,9 +108,9 @@ def amongus():
 
 def win():
     despawn()
-    musique_victoire = pyg.mixer.Sound('son/musique_victoire.mp3')
-    musique_victoire.set_volume(1)
-    musique_victoire.play()
+    music_victoire = pyg.mixer.Sound('son/musique_victoire.mp3')
+    music_victoire.set_volume(1)
+    music_victoire.play()
     while True:
         bgjeudylan = pyg.image.load("img_dylan/win.jpg")
         bgjeudylan = pyg.transform.scale(bgjeudylan, (height, width))
@@ -119,6 +119,7 @@ def win():
         for event in pyg.event.get():
             if event.type == pyg.KEYDOWN:
                 if event.key == pyg.K_ESCAPE:
+                    music_victoire.stop()
                     base_menu()
             if event.type == pyg.QUIT:
                 pyg.quit()
@@ -126,6 +127,10 @@ def win():
 
 
 def loose():
+    despawn()
+    music_defaite = pyg.mixer.Sound('son/music_defaite.mp3')
+    music_defaite.set_volume(1)
+    music_defaite.play()
     while True:
         bgloose = pyg.image.load("img_dylan/game_over.jpg")
         bgloose = pyg.transform.scale(bgloose, (height, width))
@@ -134,6 +139,7 @@ def loose():
         for event in pyg.event.get():
             if event.type == pyg.KEYDOWN:
                 if event.key == pyg.K_ESCAPE:
+                    music_defaite.stop()
                     base_menu()
             if event.type == pyg.QUIT:
                 pyg.quit()
