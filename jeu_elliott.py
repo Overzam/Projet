@@ -69,6 +69,7 @@ def jeu_ell():
 
                 if event.type == pyg.KEYDOWN:
                     if event.key == pyg.K_ESCAPE:
+                        pyg.key.set_repeat(1)
                         music.stop()
                         base_menu()
 
