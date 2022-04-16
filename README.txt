@@ -5,7 +5,9 @@ POUR LANCER LE JEU, LANCER LE FICHIER "jeu_1.py".
 Vous pouvez à partir du menu sélectionner depuis le menu principal le mode "JEU" pour enchaîner les mini-jeux, ou le mode "TEST" pour en essayer un en particulier.
 
 
+
 ################################################   DESCRIPTION DES MINI-JEUX   ################################################
+
 
 Dans l'ordre d'apparition dans le mode "JEU":
 
@@ -32,6 +34,7 @@ Les anneaux apparaissent à différents endroits de l'écran aléatoirement. Pas
 Obtenez 20 POINTS dans la limite de temps (30 secondes) pour gagner.
 
 
+
 ###############################################   EN PLUS DES MINI-JEUX   ###############################################
 
 
@@ -44,9 +47,6 @@ Documentation: Elliott STERN
 /!\ En sah l'anneau de sonic c'est un vieux png sur google image /!\
 
 Nous estimons que notre code provient à 5% d'internet.
-
-
-
 
 
 
