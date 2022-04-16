@@ -1,49 +1,49 @@
-# Projet
- NSI GAME
-Ce projet de NSI a été créé par les élèves Dylan BARROS, Thomas MAYE, Maximilien BERNARD, Elliott STERN en classe de 1ère4 à Bury-Rosaire.
-Le jeu proposé est disponible en ouvrant le fichier jeu_1.py. Le projet final est constitué de 4 mini-jeux distincts divisé dans un fichier chacun.
-
-Le premier mini-jeu intitulé "L'attaque des parachutes" a été créé par Dylan BARROS. Le principe est de faire exploser les candidats en pressant la touche espace et en utilisant les flèches directionnelles pour se déplacer d'emplacements dans lequel les parachutistes peuvent atterir. Il y a des parachutistes dorés qui rajoutent du temps ainsi que des bombes qui en font perdre. Le but est d'atteindre 30 points avant la fin du compte à rebours.
-
-Le second mini-jeu intitulé "L'attaque des bateaux" a été créé par Maximilien BERNARD. Le principe est de cliquer gauche sur les bateaux arrivant de la gauche afin de les faire exploser avant qu'ils atteignent la base navale. Un gros bateau vaut plus de points cependant ils infligent plus de dégats à la base. De plus, un ultime est disponible une fois par partie en appuyant sur la touche U. Celui-ci explose l'intégralité des bateaux présents sur l'écran. Le but est d'atteindre 30 points avant la fin du compte à rebours.
-
-Le troisième mini-jeu intitulé "L'attaque sur la France" a été créé par Thomas MAYE. Le principe est d'alterner les flèches directionnelles droite et gauche afin de faire avancer l'avion puis le tank chacun leur tour. Le but est que l'avion ainsi que le tank finissent dans la zone verte en haut de l'écran étant située en France à la fin du compte à rebours. Si l'avion et/ou le tank finissent dans la zone à gauche ainsi que la zone hivernale, ceci est considéré comme une défaite.
-
-Le quatrième mini-jeu intitulé "L'attaque aérienne" a été créé par Elliott STERN. Le principe est d'utiliser les flèches directionnelles afin de diriger l'avion pour récupérer les anneaux dipersés de manière aléatoire dans le ciel. Le but est de récupérer 20 anneaux avant la fin du compte à rebours.
-
-L'intégralité des images ainsi que des musiques ont été créé par les membres du groupe :
-Fournisseur des sprites : Maximilien BERNARD
-Compositeur des musiques : Thomas MAYE
-
-Nous estimons à 2% le code venant d'internet.
+# Projet: NSI GAME
+Ce projet de NSI a été créé par les élèves Dylan BARROS, Thomas MAYE, Maximilien BERNARD, Elliott STERN en classe de 1ère4 au lycée Notre-Dame de Bury.
+Le projet est constitué de 4 mini-jeux, chacun ayant son fichier python nommé d'après la nomenclature "jeu_" et le prénom en minuscule de l'auteur.
+POUR LANCER LE JEU, LANCER LE FICHIER "jeu_1.py".
+Vous pouvez à partir du menu sélectionner depuis le menu principal le mode "JEU" pour enchaîner les mini-jeux, ou le mode "TEST" pour en essayer un en particulier.
 
 
+###################################################################   DESCRIPTION DES MINI-JEUX   ##########################################################################
+
+Dans l'ordre d'apparition dans le mode "JEU":
+
+"L'attaque des parachutes", de Dylan BARROS
+FLECHES DROITE/GAUCHE pour changer de voie, TOUCHE ESPACE pour exploser un parachutiste une fois assez proche.
+Les parachutistes tombent du ciel pour vous attaquer, abattez-les avant qu'ils ne prennent contrôle!
+Exploser un PARACHUTISTE sur la voie sélectionnée donne 1 point au SCORE; exploser un PARACHUTISTE DORE donne 1 point au score et un BONUS de temps; faire contact avec une BOMBE la fait exploser et donne un MALUS de temps.
+Obtenez 30 POINTS dans la limite de temps (30 SECONDES) pour gagner.
+
+"L'attaque des bateaux", de Maximilien BERNARD
+Bougez le viseur avec la SOURIS, CLIC GAUCHE pour exploser un bateau dans le viseur, U lance une bombe détruisant tous les navires à l'écran (1 fois par partie).
+Les navires avancent depuis la gauche de l'écran, si un navire atteint la base, celle-ci prend des dégâts, si la base prend trop de dégâts, elle sera détruite. Empêchez les navires d'atteindre le littoral.
+Exploser un bateau ajoute 1 point au SCORE.
+Obtenez 30 POINTS et gardez la base en bon état dans la limite de temps (30 SECONDES) pour gagner.
+
+"L'attaque sur la France", de Thomas MAYE
+FLECHES DROITE/GAUCHE pour faire avancer respectivement le tank et l'avion
+Alternez droite et gauche pour faire avancer le tank et l'avion chacun leur tour.
+Maintenez les deux unités dans lazone verte à la fin du compte à rebours (10 secondes) pour gagner.
+
+"L'attaque aérienne", d'Elliott STERN
+FLECHES HAUT, BAS, GAUCHE et DROITE pour voler soit horizontalement, soit en diagonale (un avion ne peut pas bouger verticalement sans bouger horizontalement).
+Les anneaux apparaissent à différents endroits de l'écran aléatoirement. Passer dans un anneau rapporte 1 POINT.
+Obtenez 20 POINTS dans la limite de temps (30 secondes) pour gagner.
 
 
+##################################################################   EN PLUS DES MINI-JEUX   ###############################################################################
 
 
+Sprites et fonds du jeu: Maximilien BERNARD
+Musique synthwave: Thomas MAYE
+Menus et centralisation des programmes: Dylan BARROS
+Documentation: Elliott STERN
 
+/!\ L'animation d'explosion est tirée d'une base de données libres de droit sur internet /!\
+/!\ En sah l'anneau de sonic c'est un vieux png sur google image /!\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Nous estimons que notre code provient à 5% d'internet.
 
 
 
