@@ -4,7 +4,7 @@ from sys import exit
 def menu_mini():
     from jeu_1 import screen, height, width
     from jeu_dylan import jeu
-    from Siorac import jeu_max
+    from jeu_maximilien import jeu_max
     from jeu_thomas import jeu_tomaye
     from menu import base_menu
     from transition import trans_screen

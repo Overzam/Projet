@@ -59,7 +59,6 @@ def jeu_tomaye():
     xfleche = height / 2.5
     yfleche = width / 50
     nbtouches = 0
-    vitesse = randint(1,4)
 
     avionsEnRoute = True
     # lancement du jeu mon bébou
@@ -75,20 +74,20 @@ def jeu_tomaye():
                         music.stop()
                         base_menu()
                 if event.key == pyg.K_LEFT and Leftkey == False:
-                    xavion += height / 15*(vitesse/3)
+                    xavion += height / 15
                     nbtouches += 1
                     Leftkey = True
                     Rightkey = False
                     screen.blit(avion, (xavion, yavion))
                 if event.key == pyg.K_RIGHT and Rightkey == False:
-                    xtank += height / 15*(vitesse/3)
+                    xtank += height / 15
                     nbtouches += 1
                     Rightkey = True
                     Leftkey = False
                     screen.blit(tank, (xtank, ytank))
 
-        xtank -= width / 400 * vitesse
-        xavion -= width / 400 * vitesse
+        xtank -= width / 400
+        xavion -= width / 400
         seconds = round(10 - ((pyg.time.get_ticks() - start_ticks) / 1000))
         screen.blit(tank, (xtank, ytank))
         screen.blit(avion, (xavion, yavion))

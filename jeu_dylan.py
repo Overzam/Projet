@@ -9,7 +9,7 @@ clock = pyg.time.Clock()
 def jeu():
     from jeu_1 import height, width, screen, win, loose, amongus, shake, explo
     from transition import trans_screen
-    from Siorac import jeu_max
+    from jeu_maximilien import jeu_max
     from menu import base_menu
     global x_explo
     global y_explo
