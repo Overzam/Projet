@@ -1,9 +1,9 @@
 # Projet
  NSI GAME
-Ce projet de NSI a été créé par les élèves Dylan BARROS, Thomas MAYE, Maximilien BERNARD, Elliott STERN en classe de 1ère4 à Bury-Rosaire.
+Ce projet de NSI a été créé par les élèves Dylan BARROS, Thomas MAYE, Maximilien BERNARD, Elliott STERN en classe de 1ère4 à Bury.
 Le jeu proposé est disponible en ouvrant le fichier jeu_1.py. Le projet final est constitué de 4 mini-jeux distincts divisé dans un fichier chacun.
 
-Le premier mini-jeu intitulé "L'attaque des parachutes" a été créé par Dylan BARROS. Le principe est de faire exploser les candidats en pressant la touche espace et en utilisant les flèches directionnelles pour se déplacer d'emplacements dans lequel les parachutistes peuvent atterir. Il y a des parachutistes dorés qui rajoutent du temps ainsi que des bombes qui en font perdre. Le but est d'atteindre 30 points avant la fin du compte à rebours.
+Le premier mini-jeu intitulé "L'attaque des parachutistes" a été créé par Dylan BARROS. Le principe est de faire exploser les candidats en pressant la touche espace et en utilisant les flèches directionnelles pour se déplacer d'emplacements dans lequel les parachutistes peuvent atterir. Il y a des parachutistes dorés qui rajoutent du temps ainsi que des bombes qui en font perdre. Le but est d'atteindre 30 points avant la fin du compte à rebours.
 
 Le second mini-jeu intitulé "L'attaque des bateaux" a été créé par Maximilien BERNARD. Le principe est de cliquer gauche sur les bateaux arrivant de la gauche afin de les faire exploser avant qu'ils atteignent la base navale. Un gros bateau vaut plus de points cependant ils infligent plus de dégats à la base. De plus, un ultime est disponible une fois par partie en appuyant sur la touche U. Celui-ci explose l'intégralité des bateaux présents sur l'écran. Le but est d'atteindre 30 points avant la fin du compte à rebours.
 
