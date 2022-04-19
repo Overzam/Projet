@@ -14,6 +14,6 @@ Le quatrième mini-jeu intitulé "L'attaque aérienne" a été créé par Elliot
 L'intégralité des images ainsi que des musiques ont été créé par les membres du groupe :
 Fournisseur des sprites : Maximilien BERNARD
 Compositeur des musiques : Thomas MAYE
-Codeur du menu, menu des minis jeu, ecran de transitions et debugger de tous les autres jeux: Dylan BARROS
+Codeur des menus et coordinateurs des différents minis-jeu : Dylan BARROS
 
 Nous estimons à 2% le code venant d'internet.
