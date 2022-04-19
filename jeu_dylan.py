@@ -8,7 +8,7 @@ clock = pyg.time.Clock()
 
 def jeu():
     from jeu_1 import height, width, screen, win, loose, amongus, shake, explo
-    from transition import trans_screen
+    from transition import trans_screen_mouse
     from jeu_maximilien import jeu_max
     from menu import base_menu
     global x_explo
@@ -404,7 +404,7 @@ def jeu():
                 else:
                     if point >= 30:
                         musique_jeu.stop()
-                        trans_screen()
+                        trans_screen_mouse()
                         jeu_max()
                     if point == -69:
                         musique_jeu.stop()

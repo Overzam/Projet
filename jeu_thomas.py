@@ -15,7 +15,7 @@ clock = pyg.time.Clock()
 def jeu_tomaye():
     from jeu_1 import screen, width, height, win, loose
     from jeu_elliott import jeu_ell
-    from transition import trans_screen
+    from transition import trans_screen_keyboard
     from menu import base_menu
     import menu
 
@@ -33,10 +33,6 @@ def jeu_tomaye():
     tank = pyg.transform.scale(tank, (100, 80)).convert_alpha()
     avion = pyg.image.load("img_thomas/avion.png")
     avion = pyg.transform.scale(avion, (120, 80)).convert_alpha()
-    fleche = pyg.image.load("img_thomas/fleche.png")
-    fleche = pyg.transform.scale(fleche, (height // 4, width // 4)).convert_alpha()
-    flechepressed = pyg.image.load("img_thomas/flechepressed.png")
-    flechepressed = pyg.transform.scale(flechepressed, (height // 4, width // 4)).convert_alpha()
     barre = pyg.image.load("img_thomas/barre.png")
     feu = pyg.image.load("img_thomas/feu.png")
     feu = pyg.transform.scale(feu, (height, width))
@@ -98,7 +94,7 @@ def jeu_tomaye():
                     win()
                 else:
                     music.stop()
-                    trans_screen()
+                    trans_screen_keyboard()
                     jeu_ell()
             else:
                 music.stop()
@@ -108,10 +104,6 @@ def jeu_tomaye():
         screen.blit(countdown, (200, height / 60))
         if nbtouches >= 100:
             screen.blit(feu, (0, 0))
-        if seconds >= 8:
-            screen.blit(fleche, (xfleche, yfleche))
-        if 8 > seconds >= 5:
-            screen.blit(flechepressed, (xfleche, yfleche))
         screen.blit(barre, (0, 0))
         pyg.display.update()
         pyg.display.flip()

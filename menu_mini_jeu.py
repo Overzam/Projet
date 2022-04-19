@@ -7,7 +7,7 @@ def menu_mini():
     from jeu_maximilien import jeu_max
     from jeu_thomas import jeu_tomaye
     from menu import base_menu
-    from transition import trans_screen
+    from transition import trans_screen_mouse, trans_screen_keyboard
     from jeu_elliott import jeu_ell
     black = (0, 0, 0)
     white = (255, 255, 255)
@@ -54,16 +54,16 @@ def menu_mini():
 
     while True:
         if jeu1.draw():
-            trans_screen()
+            trans_screen_keyboard()
             jeu()
         if jeu2.draw():
-            trans_screen()
+            trans_screen_mouse()
             jeu_max()
         if jeu3.draw():
-            trans_screen()
+            trans_screen_keyboard()
             jeu_tomaye()
         if jeu4.draw():
-            trans_screen()
+            trans_screen_keyboard()
             jeu_ell()
 
         titre_elliott = "L'attaque aérienne"

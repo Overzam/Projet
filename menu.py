@@ -4,7 +4,7 @@ from sys import exit
 
 def base_menu():
     from jeu_1 import height, width, screen
-    from transition import trans_screen
+    from transition import trans_screen_keyboard
     from jeu_dylan import jeu
     from menu_mini_jeu import menu_mini
     global score
@@ -61,7 +61,7 @@ def base_menu():
         if play_but.draw():
             musique_menu.stop()
             gamemode = 0
-            trans_screen()
+            trans_screen_keyboard()
             jeu()
         if options_but.draw():
             musique_menu.stop()

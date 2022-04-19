@@ -8,7 +8,7 @@ pygame.font.init()
 def jeu_max():
     from jeu_1 import win, loose, amongus, height, width
     from jeu_thomas import jeu_tomaye
-    from transition import trans_screen
+    from transition import trans_screen_keyboard
     from menu import base_menu
 
 
@@ -470,7 +470,7 @@ def jeu_max():
                 if Point < 30:
                     loose()
                 else:
-                    trans_screen()
+                    trans_screen_keyboard()
                     jeu_tomaye()
 
     ########################################################################################################################
