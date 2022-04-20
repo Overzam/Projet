@@ -1,3 +1,5 @@
+#########################################  DESCRIPTION ET ACCESIBILITE DU PROJET   ##########################################
+
 # Projet: NSI GAME
 Ce projet de NSI a été créé par les élèves Dylan BARROS, Thomas MAYE, Maximilien BERNARD, Elliott STERN en classe de 1ère4 au lycée Notre-Dame de Bury.
 Le projet est constitué de 4 mini-jeux, chacun ayant son fichier python nommé d'après la nomenclature "jeu_" et le prénom en minuscule de l'auteur.
