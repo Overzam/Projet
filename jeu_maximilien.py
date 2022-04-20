@@ -12,7 +12,12 @@ def jeu_max():
     from transition import trans_screen_keyboard
     from menu import base_menu
 
+########################################################################################################################
 
+    # Durant tous le programe "tank" définis le gros bateau, "Soldat" et "Soldat2" définissent un des petits bateau
+
+########################################################################################################################
+    
     pygame.mouse.set_visible(0) # Le curseur de la souris devient invisible
 
 ########################################################################################################################
@@ -148,10 +153,10 @@ def jeu_max():
 ########################################################################################################################
 
     start_ticks = pygame.time.get_ticks()
-    JeuLance = True
-    Ult = True
-    x_MouseAncien = pygame.mouse.get_pos(0)
-    y_MouseAncien = pygame.mouse.get_pos(1)
+    JeuLance = True # Le jeu est lance
+    Ult = True # L'ult est disponoble
+    x_MouseAncien = pygame.mouse.get_pos(0) # Variable pour plus tard
+    y_MouseAncien = pygame.mouse.get_pos(1) # Variable pour plus tard
 
     musique_jeu = pygame.mixer.Sound('son/synthware.mp3')
     musique_jeu.set_volume(0.02)
@@ -166,44 +171,44 @@ def jeu_max():
 
             # Deplacement du Viseur par les touches
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_w:
+                if event.key == pygame.K_w: # Ester egg
                     amongus()
-                if event.key == pygame.K_ESCAPE:
+                if event.key == pygame.K_ESCAPE: # retour au menu
                     musique_jeu.stop()
                     menu.base_menu()
-                if event.key == pygame.K_u:
+                if event.key == pygame.K_u: # Déclenchement de l'ult
                     if Ult:
-                        x_explo = 800
-                        y_explo = 800
+                        x_explo = 800 # Définis la taille de l'explosion                                   Shéma type systématique à toutes les explosions
+                        y_explo = 800 # Dfinis la taille de l'explosion
                         anim_explo = pygame.sprite.Group()  # animation d'explosion
-                        explosion = explo(height // 8, width // 8)
+                        explosion = explo(height // 8, width // 8) # coordonnées de l'explosion
                         anim_explo.add(explosion)
                         explosion.animate()
                         anim_explo.draw(screen)
-                        anim_explo.update(0.35)
-                        x_explo = 100
-                        y_explo = 100
+                        anim_explo.update(0.35) # temps entre les frames
+                        x_explo = 100 # rednis la taille de l'explosion
+                        y_explo = 100 # rednis la taille de l'explosion
 
-                        Ult = False
+                        Ult = False # l'ult est désormais indisponible
 
-                        y_Soldat = width // 3
-                        x_Soldat = -100
+                        y_Soldat = width // 3 # remet les unités au début
+                        x_Soldat = -20
                         y_Soldat2 = width * 2 // 3
-                        x_Soldat2 = -100
+                        x_Soldat2 = -200
                         y_Tank = width // 2
-                        x_Tank = -100
-                        Point += 10
+                        x_Tank = -200
+                        Point += 3
 
-                if event.key == pygame.K_d or event.key == pygame.K_RIGHT:
+                if event.key == pygame.K_d or event.key == pygame.K_RIGHT: # definis la droite pour un jeu au clavier
                     x_Viseur += height // 100
 
-                if event.key == pygame.K_q or event.key == pygame.K_LEFT:
+                if event.key == pygame.K_q or event.key == pygame.K_LEFT: # definis la gauche pour un jeu au clavier
                     x_Viseur -= height // 100
 
-                if event.key == pygame.K_z or event.key == pygame.K_UP:
+                if event.key == pygame.K_z or event.key == pygame.K_UP: # definis le haut pour un jeu au clavier
                     y_Viseur -= width // 70
 
-                if event.key == pygame.K_s or event.key == pygame.K_DOWN:
+                if event.key == pygame.K_s or event.key == pygame.K_DOWN: # definis le bas pour un jeu au clavier
                     y_Viseur += width // 70
 
 ########################################################################################################################
@@ -213,7 +218,7 @@ def jeu_max():
 
                 # Definis l'espace
                 if event.key == pygame.K_SPACE:
-                    if x_Viseur + 25 >= x_Soldat and x_Viseur + 25 <= x_Soldat + height_Soldat and y_Viseur + 25 >= y_Soldat and y_Viseur + 25 <= y_Soldat + width_Soldat:
+                    if x_Viseur + 25 >= x_Soldat and x_Viseur + 25 <= x_Soldat + height_Soldat and y_Viseur + 25 >= y_Soldat and y_Viseur + 25 <= y_Soldat + width_Soldat: # test si les coordonnees du viseur sont sur celle du soldat
                         anim_explo = pygame.sprite.Group()  # animation d'explosion
                         explosion = explo(x_Soldat, y_Soldat)
                         anim_explo.add(explosion)
@@ -223,7 +228,7 @@ def jeu_max():
                         x_Soldat = - 20
                         y_Soldat = randint(100, width - 200)
                         Point += 2
-                    elif x_Viseur + 25 >= x_Tank and x_Viseur + 25 <= x_Tank + height_Tank and y_Tank <= y_Viseur + 25 <= y_Tank + width_Tank:
+                    elif x_Viseur + 25 >= x_Tank and x_Viseur + 25 <= x_Tank + height_Tank and y_Tank <= y_Viseur + 25 <= y_Tank + width_Tank:# test si les coordonnees du viseur sont sur celle du tank
                         anim_explo = pygame.sprite.Group()  # animation d'explosion
                         explosion = explo(x_Tank, y_Tank)
                         anim_explo.add(explosion)
@@ -233,7 +238,7 @@ def jeu_max():
                         x_Tank = - 20
                         y_Tank = randint(100, width - 200)
                         Point += 2
-                    elif x_Viseur + 25 >= x_Soldat2 and x_Viseur + 25 <= x_Soldat2 + height_Soldat2 and y_Viseur + 25 >= y_Soldat2 and y_Viseur + 25 <= y_Soldat2 + width_Soldat2:
+                    elif x_Viseur + 25 >= x_Soldat2 and x_Viseur + 25 <= x_Soldat2 + height_Soldat2 and y_Viseur + 25 >= y_Soldat2 and y_Viseur + 25 <= y_Soldat2 + width_Soldat2: # test si les coordonnees du viseur sont sur celle du soldat2
                         anim_explo = pygame.sprite.Group()  # animation d'explosion
                         explosion = explo(x_Soldat2, y_Soldat2)
                         anim_explo.add(explosion)
@@ -243,7 +248,7 @@ def jeu_max():
                         x_Soldat2 = - 20
                         y_Soldat2 = randint(100, width - 200)
                         Point += 2
-                    elif x_Viseur + 25 >= x_Ulte and x_Viseur + 25 <= x_Ulte + 200 and y_Ulte + 25 >= y_Ulte and y_Ulte + 25 <= y_Ulte + 150:
+                    elif x_Viseur + 25 >= x_Ulte and x_Viseur + 25 <= x_Ulte + 200 and y_Ulte + 25 >= y_Ulte and y_Ulte + 25 <= y_Ulte + 150:# test si les coordonnees du viseur sont sur celle de l'ult
                         if Ult:
                             x_explo = 800
                             y_explo = 800
@@ -365,10 +370,10 @@ def jeu_max():
         x_Soldat2 += 3
 
         # Retour des Soldats au depart
-        if x_Soldat >= height // 2.4:
+        if x_Soldat >= height // 2.4: # test de si le soldat depasse la berge
             x_explo = 500
             y_explo = 500
-            anim_explo = pygame.sprite.Group()  # animation d'explosion
+            anim_explo = pygame.sprite.Group()  # animation d'explosion sur la base
             explosion = explo((height * 3 // 5), width // 4)
             anim_explo.add(explosion)
             explosion.animate()
@@ -376,7 +381,8 @@ def jeu_max():
             anim_explo.update(0.35)
             x_explo = 100
             y_explo = 100
-            nim_explo = pygame.sprite.Group()  # animation d'explosion
+            
+            nim_explo = pygame.sprite.Group()  # animation d'explosion sur le bateau
             explosion = explo(x_Soldat, y_Soldat)
             anim_explo.add(explosion)
             explosion.animate()
@@ -387,10 +393,10 @@ def jeu_max():
             x_Soldat = - 20
             y_Soldat = randint(200, width - 200)
 
-        if x_Soldat2 >= height // 2.4:
+        if x_Soldat2 >= height // 2.4: # test de si le soldat2 depasse la berge
             x_explo = 500
             y_explo = 500
-            anim_explo = pygame.sprite.Group()  # animation d'explosion
+            anim_explo = pygame.sprite.Group()  # animation d'explosion sur la base
             explosion = explo((height * 3 // 5), width // 4)
             anim_explo.add(explosion)
             explosion.animate()
@@ -398,7 +404,8 @@ def jeu_max():
             anim_explo.update(0.35)
             x_explo = 100
             y_explo = 100
-            nim_explo = pygame.sprite.Group()  # animation d'explosion
+            
+            nim_explo = pygame.sprite.Group()  # animation d'explosion sur le bateau
             explosion = explo(x_Soldat2, y_Soldat2)
             anim_explo.add(explosion)
             explosion.animate()
@@ -416,10 +423,10 @@ def jeu_max():
         x_Tank += 4.5
 
         # Retour du Tank au depart
-        if x_Tank >= height // 2.4:
+        if x_Tank >= height // 2.4: # test de si le tank depasse la berge
             x_explo = 500
             y_explo = 500
-            anim_explo = pygame.sprite.Group()  # animation d'explosion
+            anim_explo = pygame.sprite.Group()  # animation d'explosion sur la base
             explosion = explo((height * 3 // 5), width // 4)
             anim_explo.add(explosion)
             explosion.animate()
@@ -427,7 +434,8 @@ def jeu_max():
             anim_explo.update(0.35)
             x_explo = 100
             y_explo = 100
-            nim_explo = pygame.sprite.Group()  # animation d'explosion
+            
+            nim_explo = pygame.sprite.Group()  # animation d'explosion sur le bateau
             explosion = explo(x_Tank, y_Tank)
             anim_explo.add(explosion)
             explosion.animate()
