@@ -268,14 +268,3 @@ def jeu_ell():
 
             # Réaffiche l'écran
             screen.blit(fond, (0, 0))
-
-            font = pyg.font.Font('freesansbold.ttf', 64)
-            countdown = font.render(str(seconds), True, white, black)
-            screen.blit(countdown, (200, height / 60))
-            score = font.render(str(point), True, white, black)
-            screen.blit(score, (1000, height / 60))
-            pyg.display.flip()
-            pyg.display.update()
-
-            # Réaffiche l'écran
-            screen.blit(fond, (0, 0))
