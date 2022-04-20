@@ -23,7 +23,7 @@ def jeu():
     global gamemode
 
     # importation et affichage du background
-    background = pyg.image.load("img_dylan/fond1.jpg")
+    background = pyg.image.load("img_dylan/fond2.png")
     background = pyg.transform.scale(background, (height, width))
     fond = background.convert()
     screen.blit(fond, (0, 0))
@@ -151,12 +151,16 @@ def jeu():
         if y_para >= width:
             # redefinition du y
             y_para = -100
+
             # redefinition du l'acceleration
             acceleration = 1.1
+
             # retrait d'un point car dans ce cas, le joueur n'a pas fait explosé le parachutiste avant qu'il atteigne le bas
             point -= 1
+
             # tremblement de l'ecran
             shake(30)
+
             # definition du lieu d'appartion du parchutiste
             chance = randint(1, 5)
 
@@ -414,6 +418,8 @@ def jeu():
                 anim_explo.update(0.35)
                 son_explo.set_volume(0.01)
                 son_explo.play()
+
+
         ## si le jeu devient trop simple, la vitesse peut etre negative donc au cas ou
         if vitesse == 0:
             vitesse = 1
@@ -435,6 +441,8 @@ def jeu():
         screen.blit(background, (0, 0))
         #actualisation du y du parachutiste
         screen.blit(para, (x_para, y_para))
+
+
         #affichage du score comme le timer
         font = pyg.font.Font('freesansbold.ttf', 64)
         text = font.render(str(point), True, darkgreen, black)
