@@ -30,7 +30,7 @@ def jeu_max():
     background = pygame.image.load("img_max\Fond_Max.jpg") # Charge l'image
     background = pygame.transform.scale(background, (height, width)) # Taille de l'image
     fond = background.convert()
-    screen.blit(fond, (0, 0))
+    screen.blit(fond, (0, 0)) # actualise le fond
     pygame.display.flip()
 
     # Definition du Viseur
@@ -38,16 +38,16 @@ def jeu_max():
 
     Viseur = pygame.transform.scale(Viseur, (50, 50)).convert_alpha() # Taille de l'image
 
-    x_Viseur = height // 2
-    y_Viseur = width // 2
+    x_Viseur = height // 2 # coordonnee x de l'image
+    y_Viseur = width // 2 # coordonnee y de l'image
 
     # Definition de l' Ult
     Ulte = pygame.image.load("img_max\Bouton u.png") # Charge l'image
 
     Ulte = pygame.transform.scale(Ulte, (200, 150)).convert_alpha() # Taille de l'image
 
-    x_Ulte = height - 250
-    y_Ulte = width - 200
+    x_Ulte = height - 250 # coordonnee x de l'image
+    y_Ulte = width - 200 # coordonnee y de l'image
 
     class explo(pygame.sprite.Sprite):
         def __init__(self, pos_x, pos_y):
@@ -102,35 +102,35 @@ def jeu_max():
     # Definition du soldat
     Soldat = pygame.image.load("img_max\Soldat.PNG") # Charge l'image
 
-    height_Soldat = height // 25
-    width_Soldat = width // 40
+    height_Soldat = height // 25  # taille en x de l'image
+    width_Soldat = width // 40  # taille en y de l'image
 
     Soldat = pygame.transform.scale(Soldat, (height_Soldat, width_Soldat)).convert_alpha() # Taille de l'image
 
-    y_Soldat = width // 3
-    x_Soldat = -100
+    y_Soldat = width // 3  # coordonnee x de l'image
+    x_Soldat = -100  # coordonnee y de l'image
 
     # Definition du soldat2
     pygame.image.load("img_max\Soldat.PNG") # Charge l'image
 
-    height_Soldat2 = height // 25
-    width_Soldat2 = width // 40
+    height_Soldat2 = height // 25  # taille en x de l'image
+    width_Soldat2 = width // 40  # taille en y de l'image
 
     Soldat2 = pygame.transform.scale(Soldat, (height_Soldat2, width_Soldat2)).convert_alpha() # Taille de l'image
 
-    y_Soldat2 = width * 2 // 3
-    x_Soldat2 = -100
+    y_Soldat2 = width * 2 // 3  # coordonnee x de l'image
+    x_Soldat2 = -100  # coordonnee y de l'image
 
     # Definition du Tank
     Tank = pygame.image.load("img_max\Tank.PNG") # Charge l'image
 
-    height_Tank = height // 15
-    width_Tank = width // 15
+    height_Tank = height // 15 # taille en x de l'image
+    width_Tank = width // 15 # taille en y de l'image
 
     Tank = pygame.transform.scale(Tank, (height_Tank, width_Tank)).convert_alpha() # Taille de l'image
 
-    y_Tank = width // 2
-    x_Tank = -100
+    y_Tank = width // 2  # coordonnee x de l'image
+    x_Tank = -100  # coordonnee y de l'image
 
     son_explo = pygame.mixer.Sound('son/son_explo.wav') # son de l'explosion
     son_explo.set_volume(0.02) # définis le volume auquel on entend le son
