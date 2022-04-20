@@ -1,3 +1,4 @@
+# importation des bibliotheque a utiliser
 import pygame as pyg
 from sys import exit
 from random import randint
