@@ -24,10 +24,6 @@ def jeu_tomaye():
     pyg.mixer.init()
     pyg.font.init()
 
-    # importation et affichage de l'icone du jeu
-    icon = pyg.image.load('img_thomas/icone.jpg')
-    pyg.display.set_icon(icon)
-
     # importation des sprites
     tank = pyg.image.load("img_thomas/tank.png")
     tank = pyg.transform.scale(tank, (100, 80)).convert_alpha()
