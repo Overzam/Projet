@@ -48,4 +48,4 @@ Musique synthwave: Thomas MAYE
 Menus et centralisation des programmes: Dylan BARROS
 Documentation: Elliott STERN
 
-Notre code provient à 3.8483305061208916431468179165501898491994048047656561761574560614504571848471847187014987651374171898709170991493 % d'internet.
+Notre code provient à 3.8483303 % d'internet.
