@@ -197,10 +197,10 @@ def jeu_ell():
             # L'angle actuel devient l'angle précédent de la prochaine boucle
             angle[0] = angle[1]
 
-            if point == 50 and niveau_de_danger == 0:
+            if point == 5 and niveau_de_danger == 0:
                 niveau_de_danger += 1
                 pyg.Rect.inflate_ip(safezone_rect, -shrink_width, -shrink_height)
-            elif point == 100 and niveau_de_danger == 1:
+            elif point == 20 and niveau_de_danger == 1:
                 niveau_de_danger += 1
                 pyg.Rect.inflate_ip(safezone_rect, -shrink_width, -shrink_height)
                 feu_haut.height, feu_bas.topleft, feu_bas.height = feu_haut.height + shrink_height / 2, (
@@ -218,7 +218,7 @@ def jeu_ell():
             # On vérifie que le joueur évite bien la zone rouge
             safe = pyg.Rect.colliderect(player_rect, safezone_rect)
             if not safe:
-                point -= 5  # Malus chaque tick passé dans la zone rouge
+                point -= 1  # Malus chaque tick passé dans la zone rouge
                 anim_explo = pyg.sprite.Group()
                 explosion = explo(x_player, y_player)
                 anim_explo.add(explosion)
@@ -230,12 +230,12 @@ def jeu_ell():
             collide = pyg.Rect.colliderect(player_rect, ring_rect)
             # Après la collision, un point au score est rajouté et l'anneau est replacé à un endroit différent
             if collide:
-                point += 5
+                point += 1
                 position[0], position[1] = position[1], position[2]
                 # On tire un nombre au sort jusqu'à ce que celui-ci soit différent des deux derniers
                 # Cela signifie que l'anneau ne sera jamais replacé au même endroit de suite
                 while (position[2] == position[1]) or (position[2] == position[0]):
-                    if point < 100:
+                    if point < 20:
                         position[2] = randint(1, 12)
                     else:
                         position[2] = randint(1, 8)
@@ -257,7 +257,7 @@ def jeu_ell():
         seconds = round(30 - ((pyg.time.get_ticks() - start_ticks) / 1000))
         if seconds <= 0:
             pyg.key.set_repeat(1)
-            if point >= 160:
+            if point >= 30:
                 if menu.gamemode == 1:
                     music.stop()
                     win()
