@@ -78,7 +78,7 @@ def menu_mini():
         texte_jeu_max = font.render(str(titre_max), True, white, black)
         screen.blit(texte_jeu_max, (height // 2 + 150, 170))
 
-        titre_jeu_dylan = "L'attaque des Parachutiste"
+        titre_jeu_dylan = "L'attaque des Parachutistes"
         texte_jeu_dylan = font.render(str(titre_jeu_dylan), True, white, black)
         screen.blit(texte_jeu_dylan, (height // 4 + 150, 170))
 
