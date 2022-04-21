@@ -16,7 +16,7 @@ Vous pouvez à partir du menu sélectionner depuis le menu principal le mode "JE
 
 Dans l'ordre d'apparition dans le mode "JEU":
 
-"L'attaque des parachutes", de Dylan BARROS
+"L'attaque des parachutistes", de Dylan BARROS
 FLECHES DROITE/GAUCHE pour changer de voie, TOUCHE ESPACE pour exploser un parachutiste une fois assez proche.
 Les parachutistes tombent du ciel pour vous attaquer, abattez-les avant qu'ils ne prennent contrôle!
 Exploser un PARACHUTISTE sur la voie sélectionnée donne 1 point au SCORE; exploser un PARACHUTISTE DORE donne 1 point au score et un BONUS de temps; faire contact avec une BOMBE la fait exploser et donne un MALUS de temps.
