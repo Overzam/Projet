@@ -42,16 +42,16 @@ def jeu_ell():
 
     # Definition du joueur
     player = pyg.image.load("img_elliott/avion2.png")
-    player = pyg.transform.scale(player,
-                                 (60 * screen_rect.width / 1080, 40 * screen_rect.height / 1080)).convert_alpha()
+    player = pyg.transform.scale(player, 
+                                 (60 * screen_rect.width // 1080, 40 * screen_rect.height // 1080)).convert_alpha()
     player_norm = player
     # Importation des images de l'avatar selon les angles
     player_up = pyg.image.load("img_elliott/avion2_up.png")
     player_up = pyg.transform.scale(player_up,
-                                    (60 * screen_rect.width / 1080, 60 * screen_rect.height / 1080)).convert_alpha()
+                                    (60 * screen_rect.width // 1080, 60 * screen_rect.height // 1080)).convert_alpha()
     player_down = pyg.image.load("img_elliott/avion2_down.png")
     player_down = pyg.transform.scale(player_down,
-                                      (60 * screen_rect.width / 1080, 60 * screen_rect.height / 1080)).convert_alpha()
+                                      (60 * screen_rect.width // 1080, 60 * screen_rect.height // 1080)).convert_alpha()
     # Coordonnées du joueur au début de la partie
     x_player, y_player = screen_rect.center
     # Hitbox du joueur, on créé un masque au sprite du joueur et on considère ce masque comme un rectanglequi entoure parfaitement le sprite de l'avatar
@@ -66,7 +66,7 @@ def jeu_ell():
 
     # Définition de l'anneau
     ring = pyg.image.load("img_elliott/ring.png")
-    ring = pyg.transform.scale(ring, (80 * screen_rect.width / 1080, 120 * screen_rect.height / 1080)).convert_alpha()
+    ring = pyg.transform.scale(ring, (80 * screen_rect.width // 1080, 120 * screen_rect.height // 1080)).convert_alpha()
     x_ring, y_ring = screen_rect.width // 5, screen_rect.height // 4
     # Hitbox de l'anneau
     ring_rect = pyg.mask.Mask.get_rect(pyg.mask.from_surface(ring))
