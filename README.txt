@@ -19,7 +19,7 @@ Dans l'ordre d'apparition dans le mode "JEU":
 "L'attaque des parachutistes", de Dylan BARROS
 FLECHES DROITE/GAUCHE pour changer de voie, TOUCHE ESPACE pour exploser un parachutiste une fois assez proche.
 Les parachutistes tombent du ciel pour vous attaquer, abattez-les avant qu'ils ne prennent contrôle!
-Exploser un PARACHUTISTE sur la voie sélectionnée donne 1 point au SCORE; exploser un PARACHUTISTE DORE donne 1 point au score et un BONUS de temps; faire contact avec une BOMBE la fait exploser et donne un MALUS de temps.
+Exploser un PARACHUTISTE sur la voie sélectionnée donne 1 point au SCORE; exploser un PARACHUTISTE DORE donne 2 secondes de plus; faire contact avec une BOMBE la fait exploser et fait perdre 2 secondes.
 Obtenez 30 POINTS dans la limite de temps (30 SECONDES) pour gagner.
 
 "L'attaque des bateaux", de Maximilien BERNARD
@@ -31,7 +31,7 @@ Obtenez 30 POINTS et gardez la base en bon état dans la limite de temps (30 SEC
 "L'attaque sur la France", de Thomas MAYE
 FLECHES DROITE/GAUCHE pour faire avancer respectivement le tank et l'avion
 Alternez droite et gauche pour faire avancer le tank et l'avion chacun leur tour.
-Maintenez les deux unités dans lazone verte à la fin du compte à rebours (10 secondes) pour gagner.
+Maintenez les deux unités dans la zone verte à la fin du compte à rebours (10 secondes) pour gagner.
 
 "L'attaque aérienne", d'Elliott STERN
 FLECHES HAUT, BAS, GAUCHE et DROITE pour voler soit horizontalement, soit en diagonale (un avion ne peut pas bouger verticalement sans bouger horizontalement).
